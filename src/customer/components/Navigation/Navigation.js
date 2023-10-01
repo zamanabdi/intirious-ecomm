@@ -40,9 +40,9 @@ export default function Navigation() {
     setOpenAuthModal(false);
   };
 
-  const handleCategoryClick = (category, section, item) => {
+  const handleCategoryClick = (category, section, item,close) => {
     navigate(`/${category.id}/${section.id}/${item.id}`);
-    
+    close();
   };
 
   const navigation = {
@@ -293,6 +293,8 @@ export default function Navigation() {
                                   <a
                                     href={item.href}
                                     className="-m-2 block p-2 text-gray-500"
+                                    onClick={() => {setOpen(false)
+                                      navigate(`/${category.id}/${section.id}/${item.id}`);}}
                                   >
                                     {item.name}
                                   </a>
@@ -395,7 +397,7 @@ export default function Navigation() {
                 <div className="flex h-full space-x-8">
                   {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
-                      {({ open }) => (
+                      {({ open,close }) => (
                         <>
                           <div className="relative flex">
                             <Popover.Button
@@ -481,7 +483,7 @@ export default function Navigation() {
                                                 className="flex"
                                               >
                                                 <p
-                                                onClick={() => handleCategoryClick(category,section,item
+                                                onClick={() => handleCategoryClick(category,section,item,close
                                                   )}
                                                   href={item.href}
                                                   className="cursor-pointer hover:text-gray-800"

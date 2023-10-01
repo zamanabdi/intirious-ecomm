@@ -240,22 +240,25 @@ export default function ProductDetails() {
         </section>
 
         {/* rating and reviews */}
-        <section>
-          <h1 className="font-semibold text-lg pb-4">
+        <section className="">
+          <h1 className="font-semibold text-lg pb-4 pl-4">
             Recent Review and Rating
           </h1>
 
-          <div className="border p-5">
-            <Grid container spacing={7}>
-              <Grid item xs={7}>
-                <div className="space-y-5">
+          <div className="border p-5 flex flex-col border-orange-600">
+
+            <div className="border border-red-600">
+
+            {/* mapping product review card */}
+              <div className="border border-yellow-400">
+                <div className="space-y-5 p-3">
                   {[1, 1, 1].map((item) => (
                     <ProductReviewCard />
                   ))}
                 </div>
-              </Grid>
+              </div>
 
-              <Grid item xs={5}>
+              <div className="border border-purple-600 p-3">
                 <h1 className="text-xl font-semibold pb-2">Product Ratings</h1>
 
                 <div className="flex items-center space-x-3">
@@ -265,6 +268,7 @@ export default function ProductDetails() {
 
                 <Box className="mt-5 space-y-3">
                   <Grid container alignItems="center" gap={2}>
+
                     <Grid item xs={2}>
                       <p>Excellent</p>
                     </Grid>
@@ -343,8 +347,9 @@ export default function ProductDetails() {
                     </Grid>
                   </Grid>
                 </Box>
-              </Grid>
-            </Grid>
+
+              </div>
+            </div>
           </div>
         </section>
 

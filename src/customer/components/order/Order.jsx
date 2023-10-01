@@ -21,8 +21,10 @@ const orderStatus = [
 const Order = () => {
   return (
     <div className="px-5 lg:px-20 ">
-      <Grid container sx={{ justifyContent: "space-between" }}>
-        <Grid item xs={2.5}>
+      <div className="md:flex md:justify-between">
+
+      {/* first item */}
+        <div className="w-full md:w-[20%]">
           <div className="h-auto shadow-lg bg-white p-5 sticky top-5">
             <h1 className="font-bold text-lg">Filter</h1>
 
@@ -47,18 +49,20 @@ const Order = () => {
 
 
           </div>
-        </Grid>
+        </div>
 
-        <Grid item xs={9} mt={3}>
-        <div className="space-y-5">
+
+        {/*second item */}
+        <div className="border border-red-800 w-[full] md:w-[75%]">
+        <div className="space-y-5 flex flex-col justify-center items-center md:block">
         {
           [1,1,1,1].map((item) => <OrderCard/>)
          }
         </div>
                
         
-        </Grid>
-      </Grid>
+        </div>
+      </div>
     </div>
   );
 };

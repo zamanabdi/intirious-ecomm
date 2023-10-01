@@ -4,9 +4,9 @@ import React from "react";
 const ProductReviewCard = () => {
   return (
     <div>
-      <Grid container spacing={2} gap={3}>
+      <div container spacing={2} gap={3}>
         {/*grid item 1 */}
-        <Grid item xs={1}>
+        {/*<Grid item xs={1} className="pr-7">
           <Box>
             <Avatar
               className="text-white"
@@ -15,7 +15,7 @@ const ProductReviewCard = () => {
               R
             </Avatar>
           </Box>
-        </Grid>
+  </Grid>*/}
 
         <Grid item xs={9}>
           <div className="space-y-2">
@@ -31,7 +31,7 @@ const ProductReviewCard = () => {
 
 
 
-      </Grid>
+      </div>
     </div>
   );
 };

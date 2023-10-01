@@ -9,7 +9,7 @@ const navigate = useNavigate();
 
   return (
     <div onClick={() => navigate(`/account/order/${12}`)} className="p-5 shadow-md hover:shadow-2xl">
-      <div className="border border-red-600 md:flex">
+      <div className="md:flex">
 
       <div className="image wrapper">
       {/* first grid */}
@@ -21,7 +21,7 @@ const navigate = useNavigate();
           alt="lights"
         />
 
-        <div className="ml-5 space-y-2">
+        <div className="ml-5 space-y-2 flex flex-col justify-center items-start">
           <p className="">
             Vintage Rustic Wall Chimney Industrial Lamp Fixture Glass Shade
           </p>
@@ -44,7 +44,7 @@ const navigate = useNavigate();
 
     {/* price */}
     <div>
-    <p>₹947</p>
+    <p className="font-bold opacity-50">₹947</p>
   </div>
 
       {true && (

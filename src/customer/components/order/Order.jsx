@@ -53,7 +53,7 @@ const Order = () => {
 
 
         {/*second item */}
-        <div className="border border-red-800 w-[full] md:w-[75%]">
+        <div className="w-[full] md:w-[75%]">
         <div className="space-y-5 flex flex-col justify-center items-center md:block">
         {
           [1,1,1,1].map((item) => <OrderCard/>)
